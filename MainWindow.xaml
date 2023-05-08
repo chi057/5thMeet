@@ -5,7 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_5thMeet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="影音播放程式" Height="500" Width="750">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3E2AC3" Offset="0.199"/>
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FFDD8888" Offset="0.644"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         
     </Grid>
