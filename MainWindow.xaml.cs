@@ -61,5 +61,10 @@ namespace _5thMeet
         {
             Environment.Exit(0);
         }
+
+        private void SliVolume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            MedShow.Volume = SliVolume.Value;
+        }
     }
 }
