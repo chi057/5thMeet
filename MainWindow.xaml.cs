@@ -85,6 +85,7 @@ namespace _5thMeet
         private void timer_tick(object sender, EventArgs e)
         {
             SliProgress.Value = MedShow.Position.TotalMilliseconds;
+            TextBox.Text = MedShow.Position.ToString("h'h 'm'm 's's'");
         }
 
         private void SliProgress_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)

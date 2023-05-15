@@ -22,7 +22,8 @@
         <Button x:Name="BtnExit" Content="離開" HorizontalAlignment="Center" Height="31" Margin="384,429,252,10.4" VerticalAlignment="Center" Width="108" FontSize="20" Background="#FF8E8180" Click="BtnExit_Click"/>
         <TextBox x:Name="TxtFilePath" HorizontalAlignment="Center" Height="35" Margin="43,28,159,407.4" TextWrapping="Wrap" VerticalAlignment="Center" Width="542"/>
         <Slider x:Name="SliVolume" HorizontalAlignment="Center" Margin="505,436,42,15.4" VerticalAlignment="Center" Width="197" Height="19" Maximum="1" LargeChange="0.05" TickFrequency="0.01" Value="0.5" ValueChanged="SliVolume_ValueChanged"/>
-        <Slider x:Name="SliProgress" HorizontalAlignment="Center" Height="21" Margin="45,403,40,46.4" VerticalAlignment="Center" Width="659" Background="#FF7A7878" PreviewMouseLeftButtonUp="SliProgress_PreviewMouseLeftButtonUp"/>
+        <Slider x:Name="SliProgress" HorizontalAlignment="Center" Height="21" Margin="45,403,159,46.4" VerticalAlignment="Center" Width="540" Background="#FF7A7878" PreviewMouseLeftButtonUp="SliProgress_PreviewMouseLeftButtonUp"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Center" Height="23" Margin="590,403,42,44.4" TextWrapping="Wrap" VerticalAlignment="Center" Width="112" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
