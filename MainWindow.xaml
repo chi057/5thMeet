@@ -14,14 +14,15 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <MediaElement x:Name="MedShow" HorizontalAlignment="Center" Height="330" Margin="43,68,42,72.4" VerticalAlignment="Center" Width="659"/>
-        <Button x:Name="BtnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Height="35" Margin="590,28,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FFF17F36" Click="BtnOpenFile_Click"/>
-        <Button x:Name="BtnPlay" Content="▶" HorizontalAlignment="Left" Height="31" Margin="45,429,0,0" VerticalAlignment="Top" Width="108" FontSize="20" Background="#FF157CEB" Click="BtnPlay_Click"/>
-        <Button x:Name="BtnPause" Content="⏸" HorizontalAlignment="Left" Height="31" Margin="157,429,0,0" VerticalAlignment="Top" Width="109" FontSize="20" Background="#FFDBE417" Click="BtnPause_Click"/>
-        <Button x:Name="BtnStop" Content="⏹" HorizontalAlignment="Left" Height="31" Margin="271,429,0,0" VerticalAlignment="Top" Width="107" FontSize="20" Background="#FFFA1E0D" Click="BtnStop_Click"/>
-        <Button x:Name="BtnExit" Content="離開" HorizontalAlignment="Left" Height="31" Margin="383,429,0,0" VerticalAlignment="Top" Width="108" FontSize="20" Background="#FF8E8180" Click="BtnExit_Click"/>
-        <TextBox x:Name="TxtFilePath" HorizontalAlignment="Left" Height="35" Margin="43,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="542"/>
+        <MediaElement x:Name="MedShow" HorizontalAlignment="Center" Height="330" Margin="43,68,42,72.4" VerticalAlignment="Center" Width="659" MediaOpened="MedShow_MediaOpened"/>
+        <Button x:Name="BtnOpenFile" Content="開啟檔案" HorizontalAlignment="Center" Height="35" Margin="590,28,42,407.4" VerticalAlignment="Center" Width="112" FontSize="20" Background="#FFF17F36" Click="BtnOpenFile_Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button x:Name="BtnPlay" Content="▶" HorizontalAlignment="Center" Height="31" Margin="45,429,591,10.4" VerticalAlignment="Center" Width="108" FontSize="20" Background="#FF157CEB" Click="BtnPlay_Click"/>
+        <Button x:Name="BtnPause" Content="⏸" HorizontalAlignment="Center" Height="31" Margin="158,429,477,10.4" VerticalAlignment="Center" Width="109" FontSize="20" Background="#FFDBE417" Click="BtnPause_Click"/>
+        <Button x:Name="BtnStop" Content="⏹" HorizontalAlignment="Center" Height="31" Margin="272,429,365,10.4" VerticalAlignment="Center" Width="107" FontSize="20" Background="#FFFA1E0D" Click="BtnStop_Click"/>
+        <Button x:Name="BtnExit" Content="離開" HorizontalAlignment="Center" Height="31" Margin="384,429,252,10.4" VerticalAlignment="Center" Width="108" FontSize="20" Background="#FF8E8180" Click="BtnExit_Click"/>
+        <TextBox x:Name="TxtFilePath" HorizontalAlignment="Center" Height="35" Margin="43,28,159,407.4" TextWrapping="Wrap" VerticalAlignment="Center" Width="542"/>
         <Slider x:Name="SliVolume" HorizontalAlignment="Center" Margin="505,436,42,15.4" VerticalAlignment="Center" Width="197" Height="19" Maximum="1" LargeChange="0.05" TickFrequency="0.01" Value="0.5" ValueChanged="SliVolume_ValueChanged"/>
+        <Slider x:Name="SliProgress" HorizontalAlignment="Center" Height="21" Margin="45,403,40,46.4" VerticalAlignment="Center" Width="659" Background="#FF7A7878" PreviewMouseLeftButtonUp="SliProgress_PreviewMouseLeftButtonUp"/>
 
     </Grid>
 </Window>

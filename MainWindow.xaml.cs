@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace _5thMeet
 {
@@ -24,6 +25,8 @@ namespace _5thMeet
         {
             InitializeComponent();
         }
+        TimeSpan TimePosition;
+        DispatcherTimer timer = null;
         private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
         {
             var fd = new Microsoft.Win32.OpenFileDialog();           
@@ -65,6 +68,31 @@ namespace _5thMeet
         private void SliVolume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             MedShow.Volume = SliVolume.Value;
+        }
+
+        private void MedShow_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            TimePosition = MedShow.NaturalDuration.TimeSpan;
+            SliProgress.Minimum = 0;
+            SliProgress.Maximum = TimePosition.TotalMilliseconds;
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(timer_tick);
+            timer.Start();
+        }
+
+        private void timer_tick(object sender, EventArgs e)
+        {
+            SliProgress.Value = MedShow.Position.TotalMilliseconds;
+        }
+
+        private void SliProgress_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            int SliderValue = (int)SliProgress.Value;
+
+            TimeSpan ts = new TimeSpan(0, 0, 0, 0, SliderValue);
+            MedShow.Position = ts;
         }
     }
 }
