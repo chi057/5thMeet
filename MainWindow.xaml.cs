@@ -41,5 +41,25 @@ namespace _5thMeet
                 MedShow.LoadedBehavior = MediaState.Play;
             }
         }
+
+        private void BtnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            MedShow.LoadedBehavior = MediaState.Play;
+        }
+
+        private void BtnPause_Click(object sender, RoutedEventArgs e)
+        {
+            MedShow.LoadedBehavior = MediaState.Pause;
+        }
+
+        private void BtnStop_Click(object sender, RoutedEventArgs e)
+        {
+            MedShow.LoadedBehavior = MediaState.Stop;
+        }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

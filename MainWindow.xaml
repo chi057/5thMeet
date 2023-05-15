@@ -16,10 +16,10 @@
     <Grid>
         <MediaElement x:Name="MedShow" HorizontalAlignment="Center" Height="330" Margin="43,68,42,72.4" VerticalAlignment="Center" Width="659"/>
         <Button x:Name="BtnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Height="35" Margin="590,28,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FFF17F36" Click="BtnOpenFile_Click"/>
-        <Button x:Name="BtnPlay" Content="▶" HorizontalAlignment="Left" Height="35" Margin="43,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FF157CEB"/>
-        <Button x:Name="BtnPause" Content="⏸" HorizontalAlignment="Left" Height="35" Margin="160,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FFDBE417"/>
-        <Button x:Name="BtnStop" Content="⏹" HorizontalAlignment="Left" Height="35" Margin="277,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FFFA1E0D"/>
-        <Button x:Name="BtnExit" Content="離開" HorizontalAlignment="Left" Height="35" Margin="394,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FF8E8180"/>
+        <Button x:Name="BtnPlay" Content="▶" HorizontalAlignment="Left" Height="35" Margin="43,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FF157CEB" Click="BtnPlay_Click"/>
+        <Button x:Name="BtnPause" Content="⏸" HorizontalAlignment="Left" Height="35" Margin="160,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FFDBE417" Click="BtnPause_Click"/>
+        <Button x:Name="BtnStop" Content="⏹" HorizontalAlignment="Left" Height="35" Margin="277,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FFFA1E0D" Click="BtnStop_Click"/>
+        <Button x:Name="BtnExit" Content="離開" HorizontalAlignment="Left" Height="35" Margin="394,403,0,0" VerticalAlignment="Top" Width="112" FontSize="20" Background="#FF8E8180" Click="BtnExit_Click"/>
         <TextBox x:Name="TxtFilePath" HorizontalAlignment="Left" Height="35" Margin="43,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="542"/>
 
     </Grid>
